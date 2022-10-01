@@ -12,7 +12,9 @@ const routes = [
   {
     path: '/schedule',
     name: 'schedule',
-    component: Schedule
+    component: Schedule,
+    props:true
+
   },
   {
     path: '/feed',

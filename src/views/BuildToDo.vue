@@ -5,6 +5,7 @@
     <textarea
       class="tasksInput"
       placeholder="Enter some tasks..."
+      v-model="todos"
     ></textarea>
     <div class="nav-button" @click="navigate">
       <svg
@@ -26,9 +27,11 @@
 
 <script setup>
 import router from "@/router";
+import {ref} from 'vue'
 
+const todos = ref("");
 function navigate() {
-  router.push({ path: "/schedule" });
+  router.push({ name: "schedule"});
 }
 </script>
 <style scoped>
